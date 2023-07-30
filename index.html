@@ -3,10 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gestión de Alumnos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Gestor de Alumnos</h1>
+    <h1>Gestión de Alumnos</h1>
+    <form action="">
+        <fieldset>
+            <legend>Ingresar los datos del alumno</legend>
+            <div>
+                <label for="nombre">Nombre</label>
+                <input type="text" placeholder="Ingrese nombre del alumno" id="nombre">
+            </div>
+            
+            <div>
+                <label for="apellido">Apellido</label>
+                <input type="text" placeholder="Ingrese apellido del alumno" id="apellido">
+            </div>
+
+            <div>
+                <label for="materia">Seleccione la materia evaluada</label>
+                <select name="materia" id="materia">
+                    <option value="">Biología</option>
+                    <option value="">Historia</option>
+                    <option value="">Matemáticas</option>
+                    <option value="">Prácticas del Lenguaje</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="nota">Nota</label>
+                <input type="number" placeholder="Ingrese la nota asignada" id="apellido">
+            </div>
+        </fieldset>
+    </form>
     <script src="./js/index.js"></script>
 </body>
 </html>
