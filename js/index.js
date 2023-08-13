@@ -1,75 +1,48 @@
-/*DECIDÍ CAMBIAR DE ENFOQUE PARA EL PROYECTO FINAL, YA QUE TRATAR DE VINCULARLO CON MI PROYECTO
-FINAL DEL CURSO DE DESARROLLO WEB LO VEÍA MUY IMPROBABLE.
-SI ESTÁS DE ACUERDO, PARA LA PRÓXIMA ENTREGA BORRO ESTA PARTE DEL CÓDIGO.
-
-class Client {
-    constructor (nombreCliente, apellidoCliente, ciudad, provincia, fechaNacimiento, edad){
-        this.nombreCliente = nombreCliente;
-        this.apellidoCliente = apellidoCliente;
-        this.ciudad = ciudad;
-        this.provincia = provincia;
-        this.fechaNacimiento = fechaNacimiento;
-        this.edad = edad;
-    }
-}
-
-const client1 = new Client ("Carla", "Perez", "Berisso", "Bs As", "17/10/1988");
-const client2 = new Client ("Pedro", "Lopez", "La Lucila", "Bs As", "13/04/2010");
-
-client1.edad = parseInt(prompt("Ingrese su edad"))
-client2.edad = parseInt(prompt("Ingrese su edad"))
-
-
-function mayorEdad(client) {
-    
-    while (client.edad === 0) {
-        client.edad = parseInt(prompt("Ingrese una edad válida"))
-    }
-
-    if (client.edad < 18) {
-        alert("Atención " + client.nombreCliente + ": debes ser mayor de edad para realizar una compra.")
-    } else {
-        alert("Bienvenido/a " + client.nombreCliente + " ya puedes comprar en nuestra página.")
-    }
-}
-
-mayorEdad(client1)
-mayorEdad(client2)*/
-
-//Este nueva entrega está enfocada a un gestor de notas y asistencias (próximamente) de sus alumnos para que manipule un profesor.
-
 //Objetos
 //La idea es ingresar varias materias y varias notas pero necesito resolver una manera para identificar a qué materia corresponde cada nota.
 
-const student1 = {
+//Sugerencias Diego
+
+const listaAlumnos = []
+
+const crearAlumno = (nombre, apellido) => {
+    const crearID();
+    const nuevoAlumno = {
+        id,nombre,apellido,materias:{}
+    }
+
+	listaAlumnos.push(nuevoAlumno)
+}
+
+/*const alumno1 = {
     nombre: "",
     apellido: "",
     materia: "",
     nota: 0,
 }   
 
-const student2 = {
+const alumno2 = {
     nombre: "",
     apellido: "",
     materia: "",
     nota: 0,
 }  
 
-const student3 = {
+const alumno3 = {
     nombre: "",
     apellido: "",
     materia: "",
     nota: 0,
 } 
 
-const student4 = {
+const alumno4 = {
     nombre: "",
     apellido: "",
     materia: "",
     nota: 0,
 } 
 
-const student5 = {
+const alumno5 = {
     nombre: "",
     apellido: "",
     materia: "",
@@ -77,29 +50,29 @@ const student5 = {
 } 
 
 //Array
-const students = [student1, student2, student3, student4, student5]
+const alumnos = [alumno1, alumno2, alumno3, alumno4, alumno5]
 
 
 //Pensé en que los valores de las notas sean 2, 4, 6, 7, 9 para probar todas las posibilidades.
-for (student of students) {
-    student.nombre = prompt("Ingrese el nombre del alumno")
-    student.apellido = prompt("Ingrese el apellido del alumno")
-    student.materia = prompt("Ingrese la materia evaluada")
-    student.nota = parseInt(prompt("Ingrese la nota asignada"))
+for (alumno of alumnos) {
+    alumno.nombre = prompt("Ingrese el nombre del alumno")
+    alumno.apellido = prompt("Ingrese el apellido del alumno")
+    alumno.materia = prompt("Ingrese la materia evaluada")
+    alumno.nota = parseInt(prompt("Ingrese la nota asignada"))
 }
 
-function resultado(student) {
+function resultado(alumno) {
     
-    while (isNaN(student.nota)) {
-        student.nota = parseInt(prompt("Debe ingresar un dato válido."))
+    while (isNaN(alumno.nota)) {
+        alumno.nota = parseInt(prompt("Debe ingresar un dato válido."))
     }
 
-    if ((student.nota <= 4)){
+    if ((alumno.nota <= 4)){
         alert("El alumno debe recursar la materia.")
 
     }
     
-    else if ((student.nota > 4) && (student.nota < 7)){
+    else if ((alumno.nota > 4) && (alumno.nota < 7)){
         alert("El alumno debe recuperar la materia.")
 
     } else {
@@ -107,18 +80,18 @@ function resultado(student) {
     }
 }
 
-resultado(student1)
-resultado(student2)
-resultado(student3)
-resultado(student4)
-resultado(student5)
+resultado(alumno1)
+resultado(alumno2)
+resultado(alumno3)
+resultado(alumno4)
+resultado(alumno5)
 
 //Métodos de array para saber cuántos alumnos fueron aprobados y cuántos alumnos fueron desaprobados
-const aprobados = students.filter((el) => el.nota >= 7)
+const aprobados = alumnos.filter((el) => el.nota >= 7)
 
 console.log(aprobados)
 
-const desaprobados = students.filter((el) => el.nota < 7)
+const desaprobados = alumnos.filter((el) => el.nota < 7)
 
 console.log(desaprobados)
 
@@ -136,4 +109,4 @@ alert("La nota promedio de los alumnos en esta materia es: " + promedio)
 alert("La nota más alta de este curso es: " + (Math.max(...notas)))
 
 //La nota más baja
-alert("La nota más baja de este curso es: " + (Math.min(...notas)))
+alert("La nota más baja de este curso es: " + (Math.min(...notas)))*/
